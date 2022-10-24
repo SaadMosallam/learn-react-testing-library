@@ -19,6 +19,11 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: '/profile',
+    element: <Profile name="John Doe" title="Software Engineer" details="I love developing Apps using React" />,
+    errorElement: <ErrorPage />,
   }
 ]);
 

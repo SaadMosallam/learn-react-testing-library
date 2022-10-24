@@ -1,5 +1,5 @@
 import * as React from 'react';
-import NavBar from './NavBar';
+import NavBar from '../NavBar/NavBar';
 
 const Login = () => {
   function formReducer(state, action) {

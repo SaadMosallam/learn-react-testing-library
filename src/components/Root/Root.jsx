@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet, Link } from "react-router-dom";
-import NavBar from './NavBar';
+import NavBar from '../NavBar/NavBar';
 
 const Root = () => {
     return (

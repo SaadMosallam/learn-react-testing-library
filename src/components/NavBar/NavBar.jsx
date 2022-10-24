@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import reactLogo from '../assets/icons8-react.svg';
+import reactLogo from '../../assets/icons8-react.svg';
 
 export default function NavBar() {
     return (

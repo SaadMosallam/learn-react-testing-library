@@ -1,4 +1,5 @@
 import * as React from 'react';
+import NavBar from './NavBar';
 
 const Login = () => {
   function formReducer(state, action) {
@@ -28,7 +29,9 @@ const Login = () => {
   };
 
   return (
-    <div className='d-flex justify-content-center mt-5'>
+    <>
+      <NavBar />
+      <div className='d-flex justify-content-center mt-5'>
       <div className='card'>
         <div className='card-header'>
           <h3>Sign In</h3>
@@ -97,6 +100,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

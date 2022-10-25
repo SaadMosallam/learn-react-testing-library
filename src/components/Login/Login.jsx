@@ -75,17 +75,20 @@ const Login = () => {
                 placeholder='password'
               />
             </div>
-            <div>
-              <input
-                onChange={(e) =>
-                  dispatch({ type: 'REMEMBER_ME', data: e.target.checked })
-                }
-                checked={state.rememberMe}
-                name='rememberMe'
-                type='checkbox'
-                aria-label='rememberMe'
-              />
-              <span className='ml-2'>Remember Me</span>
+            <div className='d-flex align-item-center'>
+                <input
+                  onChange={(e) =>
+                    dispatch({ type: 'REMEMBER_ME', data: e.target.checked })
+                  }
+                  checked={state.rememberMe}
+                  name='rememberMe'
+                  type='checkbox'
+                  aria-label='rememberMe'
+                  id='rememberMe'
+                />
+                <label className='ml-1 mb-0' style={{ fontSize: 14 }} htmlFor="rememberMe">
+                  Remember Me
+                </label>
             </div>
             <div className='form-group mt-2'>
               <input

@@ -83,6 +83,7 @@ const Login = () => {
                 checked={state.rememberMe}
                 name='rememberMe'
                 type='checkbox'
+                aria-label='rememberMe'
               />
               <span className='ml-2'>Remember Me</span>
             </div>

@@ -5,6 +5,7 @@ import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
 import NavBar from './components/NavBar/NavBar';
 import SideNav from './components/NavBar/SideNav';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/profile" element={<Profile name="John Doe" title="Software Engineer" details="I love developing Apps using React" />} />
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>
         </div>

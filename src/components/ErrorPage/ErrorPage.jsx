@@ -6,9 +6,7 @@ const ErrorPage = () => {
     <div className="d-flex align-items-center pt-5 mt-5 flex-column" id="error-page">
       <img className="mb-5" src={bug} alt="bug" width={300} height={300} />
       <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-      </p>
+        <p>Sorry, an unexpected error has occurred.</p>
     </div>
   );
 }

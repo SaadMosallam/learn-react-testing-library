@@ -1,35 +1,31 @@
 import React from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-} from "react-router-dom";
-import Root from './components/Root/Root';
-import ErrorPage from './components/ErrorPage/ErrorPage';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Root />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/profile',
-    element: <Profile name="John Doe" title="Software Engineer" details="I love developing Apps using React" />,
-    errorElement: <ErrorPage />,
-  }
-]);
+import NavBar from './components/NavBar/NavBar';
+import SideNav from './components/NavBar/SideNav';
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <>
+      <header> 
+        <NavBar />
+        <SideNav />
+      </header>
+      
+      <div className="container">
+        <div className='row'>
+          <div className="col-12">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/profile" element={<Profile name="John Doe" title="Software Engineer" details="I love developing Apps using React" />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

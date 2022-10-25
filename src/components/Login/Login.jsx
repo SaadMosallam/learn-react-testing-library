@@ -1,5 +1,4 @@
 import * as React from 'react';
-import NavBar from '../NavBar/NavBar';
 
 const Login = () => {
   function formReducer(state, action) {
@@ -30,7 +29,6 @@ const Login = () => {
 
   return (
     <>
-      <NavBar />
       <div className='d-flex justify-content-center mt-5'>
       <div className='card'>
         <div className='card-header'>

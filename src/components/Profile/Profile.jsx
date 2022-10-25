@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import fakeProfile from '../../assets/fakeProfile.png';
-import NavBar from '../NavBar/NavBar';
 
 export default class Profile extends Component {
   state = { showDetails: true };
@@ -13,7 +12,6 @@ export default class Profile extends Component {
   render() {
     return (
       <>
-        <NavBar />
         <div className='d-flex justify-content-center mt-5'>
         <div className='card' style={{ width: '18rem' }}>
           <img

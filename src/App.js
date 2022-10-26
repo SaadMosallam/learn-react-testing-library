@@ -6,6 +6,9 @@ import Profile from './components/Profile/Profile';
 import NavBar from './components/NavBar/NavBar';
 import SideNav from './components/NavBar/SideNav';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import Travel from './components/Travel/Travel';
+import Table from './components/Table/Table';
+import { employees } from './utils';
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/profile" element={<Profile name="John Doe" title="Software Engineer" details="I love developing Apps using React" />} />
+              <Route path="/travel" element={<Travel />} />
+              <Route path="/table" element={<Table employees={employees}/>} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>

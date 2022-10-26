@@ -12,6 +12,11 @@ describe('Login page tests', () => {
         // For checkbox, to be able to have a name for it, I added aria-label attribute with 'rememberMe' name
         const checkbox = screen.getByRole('checkbox', { name: 'rememberMe' });
         const LoginButton = screen.getByRole('button', { name: 'Login' });
+
+        // we can also use debug to print the component to the console
+        // screen.debug();
+        // or debug a part of the component using
+        // screen.debug(checkbox);
         
         expect(userNameField).toBeInTheDocument();
         expect(passwordField).toBeInTheDocument();

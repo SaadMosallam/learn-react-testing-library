@@ -31,7 +31,7 @@ export const employees = [
     },
     {
         id: 6,
-        name: 'John Doe',
+        name: 'Sara Ali',
         department: 'Engineering',
         title: 'Manual QA Tester',
     },

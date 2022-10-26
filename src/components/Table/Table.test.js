@@ -14,4 +14,11 @@ describe('Table tests', () => {
         expect(roleCells.length).toBe(2);
         expect(departmentCells.length).toBe(4);
     });
+
+    test('Table component styled correctly', () => {
+        render(<Table employees={employees} />);
+        
+        const table = screen.getByRole('table');
+        expect(table).toHaveAttribute('class', 'w-50 table table-striped');
+    });
 });

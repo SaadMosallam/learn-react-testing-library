@@ -7,7 +7,7 @@ export default function NavBar() {
     return (
         <>
             <div className="pos-f-t">
-                <div className="collapse" id="navbarToggleExternalContent">
+                <div className="collapse d-lg-none" id="navbarToggleExternalContent">
                     <div className="list-group list-group-flush">
                         {NavLinks}
                     </div>
@@ -18,7 +18,7 @@ export default function NavBar() {
                     <img src={reactLogo} width="50" height="50" className="d-inline-block align-top" alt="" />
                     <h1 className="text-white ml-2">React Testing Library</h1>
                 </Link>
-                <button className="navbar-toggler d-lg-none " type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
             </nav>

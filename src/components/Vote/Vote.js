@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import * as React from 'react'
-import thumbsDown from './images/thumbs-down.svg'
-import thumbsUp from './images/thumbs-up.svg'
+import thumbsDown from '../../assets/thumbs-down.svg'
+import thumbsUp from '../../assets/thumbs-up.svg'
 
 const Vote = ({ totalGlobalLikes }) => {
   const likeReducer = (state, action) => {
@@ -34,23 +34,33 @@ const Vote = ({ totalGlobalLikes }) => {
   const handleDislikeVote = () => dispatch({ type: 'DISLIKE' })
 
   return (
-    <div className="d-flex d-inline-flex flex-column h1 m-2">
-      <h5>Note: You are not allowed to change your vote once selected!</h5>
-      <button
-        onClick={handleLikeVote}
-        disabled={hasVoted}
-        style={clickedLike ? { background: 'green' } : null}
-      >
-        <img src={thumbsUp} alt="thumbs up" />
-      </button>
-      <div>{totalLikes}</div>
-      <button
-        onClick={handleDislikeVote}
-        disabled={hasVoted}
-        style={clickedDislike ? { background: 'red' } : null}
-      >
-        <img src={thumbsDown} alt="thumbs down" />
-      </button>
+    <div className="container d-flex justify-content-center">
+      <div className="row">
+        <div className="d-flex d-inline-flex flex-column h1 m-2">
+          <h5>Note: You are not allowed to change your vote once selected!</h5>
+          <div className="row justify-content-center">
+            <div className="col-2">
+              <button
+                onClick={handleLikeVote}
+                disabled={hasVoted}
+                style={clickedLike ? { background: 'green' } : null}
+                className="btn btn-secondary p-2"
+              >
+                <img src={thumbsUp} alt="thumbs up" />
+              </button>
+              <div>{totalLikes}</div>
+              <button
+                onClick={handleDislikeVote}
+                disabled={hasVoted}
+                style={clickedDislike ? { background: 'red' } : null}
+                className="btn btn-secondary p-2"
+              >
+                <img src={thumbsDown} alt="thumbs down" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

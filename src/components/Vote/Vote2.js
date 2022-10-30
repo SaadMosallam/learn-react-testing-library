@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import * as React from 'react'
-import thumbsDown from './images/thumbs-down.svg'
-import thumbsUp from './images/thumbs-up.svg'
+import thumbsDown from '../../assets/thumbs-down.svg'
+import thumbsUp from '../../assets/thumbs-up.svg'
 import VoteBtn from './VoteBtn'
 
 const Vote = ({ totalGlobalLikes }) => {

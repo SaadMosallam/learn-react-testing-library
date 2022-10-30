@@ -10,6 +10,7 @@ import Travel from './components/Travel/Travel';
 import Table from './components/Table/Table';
 import { employees } from './utils';
 import Vote from './components/Vote/Vote';
+import DrinkSearch from './components/DrinkSearch/DrinkSearch';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
               <Route path="/travel" element={<Travel />} />
               <Route path="/table" element={<Table employees={employees}/>} />
               <Route path="/vote" element={<Vote totalGlobalLikes={10} />} />
+              <Route path="/drink" element={<DrinkSearch />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>

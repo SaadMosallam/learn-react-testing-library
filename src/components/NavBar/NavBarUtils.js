@@ -8,4 +8,5 @@ export const NavLinks = [
     <Link key="travel" to="travel" className="list-group-item list-group-item-action bg-info text-white rounded-0">Travel</Link>,
     <Link key="table" to="table" className="list-group-item list-group-item-action bg-secondary text-white rounded-0">Table</Link>,
     <Link key="vote" to="vote" className="list-group-item list-group-item-action bg-info text-white rounded-0">Vote</Link>,
+    <Link key="drink" to="drink" className="list-group-item list-group-item-action bg-secondary text-white rounded-0">Drink Search</Link>,
 ]

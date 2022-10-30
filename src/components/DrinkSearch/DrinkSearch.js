@@ -1,5 +1,5 @@
-import * as React from 'react'
-import fetchDrinks from './api/fetchDrinks'
+import * as React from 'react';
+import fetchDrinks from './fetchDrinks-api';
 
 const DrinkSearch = () => {
   const [drinks, setDrinks] = React.useState([])
@@ -78,7 +78,7 @@ const DrinkSearch = () => {
           Search
         </button>
       </form>
-      {drinks && <div className="d-flex flex-wrap">{drinkResults()}</div>}
+      {drinks && <div className="d-flex flex-wrap w-50">{drinkResults()}</div>}
       {!drinks && <h5 className="text-center mt-5">🍹 No drinks found 🍹</h5>}
       {error && <h5 className="text-center mt-5">🛑 Service unavailable 🛑</h5>}
     </div>

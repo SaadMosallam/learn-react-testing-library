@@ -12,6 +12,7 @@ import { employees } from "./utils";
 import Vote from "./components/Vote/Vote";
 import VoteEnhanced from "./components/Vote/Vote2";
 import DrinkSearch from "./components/DrinkSearch/DrinkSearch";
+import EmailForm from "./components/EmailForm/EmailForm";
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
                 path="/vote-enhanced"
                 element={<VoteEnhanced totalGlobalLikes={10} />}
               />
+              <Route path="/email" element={<EmailForm />} />
               <Route path="/drink" element={<DrinkSearch />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>

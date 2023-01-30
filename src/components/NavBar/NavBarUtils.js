@@ -53,6 +53,13 @@ export const NavLinks = [
     Vote Enhanced
   </NavLink>,
   <NavLink
+    key="email"
+    to="email"
+    className="list-group-item list-group-item-action rounded-0"
+  >
+    Mail Form
+  </NavLink>,
+  <NavLink
     key="drink"
     to="drink"
     className="list-group-item list-group-item-action rounded-0"

@@ -1,37 +1,41 @@
-import PropTypes from 'prop-types'
-import * as React from 'react'
-import thumbsDown from '../../assets/thumbs-down.svg'
-import thumbsUp from '../../assets/thumbs-up.svg'
+import PropTypes from "prop-types";
+import React from "react";
+import thumbsDown from "src/assets/thumbs-down.svg";
+import thumbsUp from "src/assets/thumbs-up.svg";
 
 const Vote = ({ totalGlobalLikes }) => {
   const likeReducer = (state, action) => {
     switch (action.type) {
-      case 'LIKE':
+      case "LIKE":
         return {
           ...state,
           totalLikes: state.totalLikes + 1,
           hasVoted: true,
-          clickedLike: true
-        }
-      case 'DISLIKE':
+          clickedLike: true,
+        };
+      case "DISLIKE":
         return {
           ...state,
           totalLikes: state.totalLikes - 1,
           hasVoted: true,
-          clickedDislike: true
-        }
+          clickedDislike: true,
+        };
       default:
-        return state
+        return state;
     }
-  }
-  const [state, dispatch] = React.useReducer(likeReducer, {
-    totalLikes: totalGlobalLikes,
-    hasVoted: false
-  })
+  };
 
-  const { totalLikes, hasVoted, clickedLike, clickedDislike } = state
-  const handleLikeVote = () => dispatch({ type: 'LIKE' })
-  const handleDislikeVote = () => dispatch({ type: 'DISLIKE' })
+  const initialState = {
+    totalLikes: totalGlobalLikes,
+    hasVoted: false,
+    clickedLike: false,
+    clickedDislike: false,
+  };
+  const [state, dispatch] = React.useReducer(likeReducer, initialState);
+
+  const { totalLikes, hasVoted, clickedLike, clickedDislike } = state;
+  const handleLikeVote = () => dispatch({ type: "LIKE" });
+  const handleDislikeVote = () => dispatch({ type: "DISLIKE" });
 
   return (
     <div className="container d-flex justify-content-center">
@@ -43,7 +47,7 @@ const Vote = ({ totalGlobalLikes }) => {
               <button
                 onClick={handleLikeVote}
                 disabled={hasVoted}
-                style={clickedLike ? { background: 'green' } : null}
+                style={clickedLike ? { background: "green" } : null}
                 className="btn btn-secondary p-2"
               >
                 <img src={thumbsUp} alt="thumbs up" />
@@ -52,7 +56,7 @@ const Vote = ({ totalGlobalLikes }) => {
               <button
                 onClick={handleDislikeVote}
                 disabled={hasVoted}
-                style={clickedDislike ? { background: 'red' } : null}
+                style={clickedDislike ? { background: "red" } : null}
                 className="btn btn-secondary p-2"
               >
                 <img src={thumbsDown} alt="thumbs down" />
@@ -62,11 +66,11 @@ const Vote = ({ totalGlobalLikes }) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 Vote.propTypes = {
-  totalGlobalLikes: PropTypes.number.isRequired
-}
+  totalGlobalLikes: PropTypes.number.isRequired,
+};
 
-export default Vote
+export default Vote;

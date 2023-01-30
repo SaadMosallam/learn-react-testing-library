@@ -25,7 +25,7 @@ exports[`Travel tests Travel component rendered correctly 1`] = `
           <p
             class="p-1"
           >
-            Our premium package allows you to take exotic trips anywhere at the cheapest prices!
+            Our premium package allows you to take exotic trips anywhere at the cheapest prices!!
           </p>
         </div>
       </div>

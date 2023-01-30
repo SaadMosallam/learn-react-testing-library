@@ -4,9 +4,7 @@ import { hasVotedEnum, altTextEnum } from "./Vote2";
 
 const VoteBtn = (props) => {
   const { hasVoted, handleVote, imgSrc, altText } = props;
-  console.log(hasVoted);
   const buttonBackgroundColor = () => {
-    console.log(hasVoted);
     switch (hasVoted) {
       case hasVotedEnum.like:
         if (altText === altTextEnum.like) return { background: "green" };

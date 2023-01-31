@@ -88,6 +88,10 @@ describe("test drinks search", () => {
 
     user.type(searchInput, "{enter}");
 
+    // we expect no element with the role of heading on the screen
+    // the queryBy is preferred when you want to verify that specific elements are not on the screen
+    // unlike getBy* and findBy* queries, queryBy* queries do not throw and error and fail the test when an element is not found
+    // queryBy* return null when an element is not found, allowing you to assert the expected absence of elements in the DOM without test failing
     const heading = screen.queryByRole("heading", { name: /test drink/i });
     expect(heading).not.toBeInTheDocument();
   });

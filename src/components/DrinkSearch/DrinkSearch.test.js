@@ -30,6 +30,7 @@ describe("test drinks search", () => {
   });
 
   test("drinks search with no drink results", async () => {
+    // we can modify the response of our MSW server to set up the scenario
     mockServer.use(
       rest.get(
         "https://www.thecocktaildb.com/api/json/v1/1/search.php",

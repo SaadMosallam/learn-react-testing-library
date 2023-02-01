@@ -66,4 +66,18 @@ export const NavLinks = [
   >
     Drink Search
   </NavLink>,
+  <NavLink
+    key="headings"
+    to="headings"
+    className="list-group-item list-group-item-action rounded-0"
+  >
+    Headings
+  </NavLink>,
+  <NavLink
+    key="retail"
+    to="retail"
+    className="list-group-item list-group-item-action rounded-0"
+  >
+    Retail
+  </NavLink>,
 ];

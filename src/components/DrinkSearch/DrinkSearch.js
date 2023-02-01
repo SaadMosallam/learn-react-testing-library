@@ -29,8 +29,6 @@ const DrinkSearch = () => {
 
   const drinkResults = () => {
     const ingredientList = (drink) => {
-      console.log(drink);
-
       const ingredients = [];
       const maxIngredients = 15;
       for (let i = 1; i <= maxIngredients; i++) {
@@ -39,7 +37,6 @@ const DrinkSearch = () => {
           ingredients.push(ingredient);
         }
       }
-      console.log(ingredients);
       return ingredients;
     };
 

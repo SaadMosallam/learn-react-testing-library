@@ -13,6 +13,10 @@ import Vote from "./components/Vote/Vote";
 import VoteEnhanced from "./components/Vote/Vote2";
 import DrinkSearch from "./components/DrinkSearch/DrinkSearch";
 import EmailForm from "./components/EmailForm/EmailForm";
+import Headings from "./components/HeadingContext/Headings";
+import RetailProducts from "src/api/retailProducts";
+import Retail from "./components/Retail/Retail";
+import { RetailProvider } from "./components/Retail/RetailContext";
 
 function App() {
   return (
@@ -47,6 +51,15 @@ function App() {
               />
               <Route path="/email" element={<EmailForm />} />
               <Route path="/drink" element={<DrinkSearch />} />
+              <Route path="/headings" element={<Headings />} />
+              <Route
+                path="/retail"
+                element={
+                  <RetailProvider products={RetailProducts}>
+                    <Retail />
+                  </RetailProvider>
+                }
+              />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>

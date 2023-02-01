@@ -27,7 +27,7 @@ function App() {
       </header>
 
       <div className="container">
-        <div className="row">
+        <div className="row" style={{ paddingTop: 81 }}>
           <div className="col-12">
             <Routes>
               <Route path="/" element={<Home />} />
